@@ -1,8 +1,13 @@
 function points(games) {
-   for(let i = 0; i < games.length; i++){
-    console.log(games[i][0]);
-   }
-    return 0
-  }
+    let sum = 0
 
-  points(["3:1", "2:2"])
+    for(let i = 0; i < games.length; i++){
+        if (games[i][0] > games[i][2]){
+          sum += 3
+        } else if (games[i][0] == games[i][2]) {
+          sum += 1
+        }
+    }
+
+    return sum
+}
